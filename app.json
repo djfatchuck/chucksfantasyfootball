@@ -1,0 +1,9 @@
+{
+  "name": "Fat Chuck's Fantasy Football",
+  "description": "Football things happen here",
+  "logo": "https://yt3.ggpht.com/-ZSq8TMQJc6M/AAAAAAAAAAI/AAAAAAAAAAA/SECRic43ufg/s88-c-k-no-mo-rj-c0xffffff/photo.jpg",
+  "image": "heroku/python",
+  "repository": "https://github.com/djfatchuck/chucksfantasyfootball",
+  "keywords": ["python", "django", "react" ],
+  "addons": [ "heroku-postgresql" ]
+}

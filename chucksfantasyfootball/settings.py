@@ -27,6 +27,9 @@ SECRET_KEY = "ng!v=^nea)u9e3*1$y%lsmga%v&@1+n^idua*l-fknko_nvv%w"
 DEBUG = True
 
 # Application definition
+PROJECT_APPS = [
+    'chucksfantasyfootball',
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -39,7 +42,7 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
-]
+] + PROJECT_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
