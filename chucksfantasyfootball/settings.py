@@ -29,6 +29,7 @@ DEBUG = True
 # Application definition
 PROJECT_APPS = [
     'chucksfantasyfootball',
+    'streams',
 ]
 
 INSTALLED_APPS = [
