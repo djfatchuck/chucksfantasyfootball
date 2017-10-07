@@ -46,7 +46,7 @@ class App extends Component {
         streams.forEach((stream) => {
             let src = "/streams/" + stream.id;
             players.push(
-                <div key={stream.title} className="player">
+                <div key={stream.id} className="player">
                     <p>{stream.title}</p>
                     <iframe src={src} name="frame" scrolling="no" frameBorder="no" align="center" height="225px"
                             width="400px"/>
@@ -58,7 +58,6 @@ class App extends Component {
 
 
     render() {
-        console.log(this.props.context);
         return (
             <div className="main-app">
                 {(this.state.overlay) ?

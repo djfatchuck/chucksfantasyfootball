@@ -11,7 +11,6 @@ def frame(request, frame_id):
     except GameStream.DoesNotExist:
         return render(request, 'badgame.html')
     f = urllib.request.urlopen(src)
-    import ipdb; ipdb.set_trace()
     soup = BeautifulSoup(str(f.read(), 'cp1252'), 'html.parser')
     soup.find('div', id="html1").decompose()
     for script in soup.body.find_all("script"):
