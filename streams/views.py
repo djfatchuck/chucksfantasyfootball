@@ -12,9 +12,14 @@ def frame(request, frame_id):
         return render(request, 'badgame.html')
     f = urllib.request.urlopen(src)
     soup = BeautifulSoup(str(f.read(), 'cp1252'), 'html.parser')
-    soup.find('div', id="html1").decompose()
-    for script in soup.body.find_all("script"):
-        script.decompose()
-    soup.find('div', {'class': "flowplayer"})['data-muted'] = "true"
+    try:
+        soup.find('div', id="html1").decompose()
+        for script in soup.body.find_all("script"):
+            script.decompose()
+        soup.find('div', {'class': "flowplayer"})['data-muted'] = "true"
+    except AttributeError:
+        pass
+    except TypeError:
+        pass
     context['soup'] = str(soup)
     return render(request, 'frame.html', context=context)
