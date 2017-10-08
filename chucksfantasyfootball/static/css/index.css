@@ -14,13 +14,10 @@ body {
 }
 
 .main-header {
-    background-image: url(../js/src/banner.jpg);
     background-size: 100% 100%;
-    background-repeat: no-repeat;
+    background: url(../js/src/banner.jpg) no-repeat;
     height: 85px;
-    border-bottom-color: #000;
-    border-bottom-style: inset;
-    border-bottom-width: thick;
+    border-bottom: thick inset #000;
 }
 
 .main-title {
@@ -34,8 +31,9 @@ body {
 
 
 .player {
-    width: 800px;
+    width: 400px;
     display: inline-block;
+    margin: 5px;
 }
 
 .overlay {
@@ -46,17 +44,3 @@ body {
     color: white;
     z-index: 1000;
 }
-
-
-/*
-iframe {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  background-size: cover;
-}*/

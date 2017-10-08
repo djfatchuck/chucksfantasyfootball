@@ -27,8 +27,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            loggedin: false,
-            overlay: false,
+            loggedin: false
         }
     }
 
@@ -47,7 +46,7 @@ class App extends Component {
             let src = "/streams/" + stream.id;
             players.push(
                 <div key={stream.id} className="player">
-                    <p>{stream.title}</p>
+                    <p>{stream.name}</p>
                     <iframe src={src} name="frame" scrolling="no" frameBorder="no" align="center" height="225px"
                             width="400px"/>
                 </div>
@@ -60,8 +59,6 @@ class App extends Component {
     render() {
         return (
             <div className="main-app">
-                {(this.state.overlay) ?
-                    <div className="overlay">Fantasy Ticker (coming soon)</div> : null}
                 <header className="main-header">
                     <h1 className="main-title">Fat Chuck's Fantasy Football</h1>
                 </header>

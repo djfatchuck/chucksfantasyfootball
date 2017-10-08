@@ -15,5 +15,6 @@ def frame(request, frame_id):
     soup.find('div', id="html1").decompose()
     for script in soup.body.find_all("script"):
         script.decompose()
+    soup.find('div', {'class': "flowplayer"})['data-muted'] = "true"
     context['soup'] = str(soup)
     return render(request, 'frame.html', context=context)
