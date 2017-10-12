@@ -29,6 +29,7 @@ DEBUG = True
 # Application definition
 PROJECT_APPS = [
     'chucksfantasyfootball',
+    'streams',
 ]
 
 INSTALLED_APPS = [
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'rest_framework',
 ] + PROJECT_APPS
 
 MIDDLEWARE = [

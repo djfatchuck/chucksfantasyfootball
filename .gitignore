@@ -3,3 +3,4 @@ staticfiles
 .env
 node_modules
 chucksfantasyfootball/static/js/dist
+dev_requirements.txt
