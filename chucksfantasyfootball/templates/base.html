@@ -1,0 +1,35 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="shortcut icon" href={% static "images/favicon.ico" %}>
+    <title>{% block title %}Fat Chuck's Fantasy Football{% endblock %}</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "css/base.css" %}{% endblock %}"/>
+    {% block extrahead %}{% endblock %}
+    {% block blockbots %}
+        <meta name="robots" content="NONE,NOARCHIVE"/>{% endblock %}
+</head>
+
+<body>
+<noscript>
+    You need to enable JavaScript to run this app.
+</noscript>
+{% block header %}
+    <header class="main-header">
+        <h1 class="main-title">Fat Chuck's Fantasy Football</h1>
+    </header>
+{% endblock header %}
+<div id="container">
+
+    {% block content %}
+    {% endblock content %}
+
+    {% block footer %}
+        <div id="footer"></div>{% endblock footer %}
+</div>
+</body>
+</html>

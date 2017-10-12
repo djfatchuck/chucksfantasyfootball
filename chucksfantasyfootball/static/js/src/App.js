@@ -26,17 +26,6 @@ class App extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            loggedin: false
-        }
-    }
-
-    signIn(username, password) {
-        if (username === "djfatchuck" && password === "djfatchuck") {
-            this.setState({
-                loggedin: true
-            })
-        }
     }
 
     players() {
@@ -59,20 +48,12 @@ class App extends Component {
     render() {
         return (
             <div className="main-app">
-                <header className="main-header">
-                    <h1 className="main-title">Fat Chuck's Fantasy Football</h1>
-                </header>
-                {(this.state.loggedin) ?
-                    <div className="main-body">
-                        <p>
-                            Fantasy Ticker (coming soon)
-                        </p>
-                        {this.players()}
-                    </div> :
-                    <LoginForm
-                        onSignIn={this.signIn.bind(this)}
-                    />
-                }
+                <div className="main-body">
+                    <p>
+                        Fantasy Ticker (coming soon)
+                    </p>
+                    {this.players()}
+                </div>
             </div>
         );
     }

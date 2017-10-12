@@ -7,6 +7,18 @@ body {
     background: #63B24A;
 }
 
+a {
+    font-family: 'Bangers', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    color: #003366;
+}
+
+.logout {
+    float: right;
+    padding-right: 15px;
+}
+
 .main-app {
     font-family: 'Bangers', sans-serif;
     text-align: center;
@@ -16,21 +28,41 @@ body {
 
 .main-header {
     background-size: 100% 100%;
-    background: url(../js/src/banner.jpg) no-repeat;
+    background: url(../js/src/banner.jpg) no-repeat center;
     height: 85px;
     border-bottom: thick inset #000;
+    text-align: center;
 }
 
 .main-title {
     font-family: 'Bungee Shade', sans-serif;
     font-size: 1.5em;
     display: inline-block;
-    float: left;
-    margin-left: 40px;
+    margin-left: -40%;
     width: 300px;
     color: black;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;}
 
+.form-container {
+    font-family: 'Bangers', sans-serif;
+    border: 1px solid black;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 28em;
+    min-width: 300px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 5px;
+}
+
+.form-container h2{
+    margin-top: 0;
+}
+
+.form-container button{
+    cursor: pointer;
+    font-family: 'Bangers', sans-serif;
+}
 
 .player {
     width: 400px;
