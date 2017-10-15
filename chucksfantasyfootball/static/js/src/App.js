@@ -36,6 +36,7 @@ class App extends Component {
             players.push(
                 <div key={stream.id} className="player">
                     <p>{stream.name}</p>
+                    <a href={src}>fullscreen</a>
                     <iframe src={src} name="frame" scrolling="no" frameBorder="no" align="center" height="225px"
                             width="400px"/>
                 </div>
